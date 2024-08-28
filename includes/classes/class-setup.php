@@ -1,11 +1,11 @@
 <?php
 /**
- * Manages plugin setup for GatherPress Awesome.
+ * Manages plugin setup for GatherPress project_name.
  *
- * @package GatherPress_Awesome
+ * @package GatherPress_project_urlname
  */
 
-namespace GatherPress_Awesome;
+namespace GatherPress_project_urlname;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
@@ -53,13 +53,13 @@ class Setup {
 	 * @return array Modified array of sub-pages including the GatherPress Alpha sub-page.
 	 */
 	public function setup_sub_page( array $sub_pages ): array {
-		$sub_pages['awesome'] = array(
-			'name'     => __( 'Awesome', 'gatherpress-awesome' ),
+		$sub_pages['project_urlname'] = array(
+			'name'     => __( 'project_name', 'gatherpress-project_urlname' ),
 			'priority' => 10,
 			'sections' => array(
-				'awesome_it_works' => array(
-					'name'        => __( 'Awesome', 'gatherpress-awesome' ),
-					'description' => __( 'GatherPress Awesome works!', 'gatherpress-awesome' ),
+				'project_urlname_it_works' => array(
+					'name'        => __( 'project_name', 'gatherpress-project_urlname' ),
+					'description' => __( 'GatherPress project_name works!', 'gatherpress-project_urlname' ),
 				),
 			),
 		);

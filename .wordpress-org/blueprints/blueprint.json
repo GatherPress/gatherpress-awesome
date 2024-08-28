@@ -15,7 +15,7 @@
     {
       "step": "setSiteOptions",
       "options": {
-        "blogname": "GatherPress Awesome",
+        "blogname": "GatherPress project_name",
         "blogdescription": "Powering Communities with WordPress.",
         "users_can_register": 1,
         "permalink_structure": "/%year%/%monthnum%/%postname%/"
@@ -30,6 +30,13 @@
     {
       "step": "runPHP",
       "code": "<?php require '/wordpress/wp-load.php'; $user_id = wp_create_user('editor', 'editorpass', 'editor@localhost.test'); (new WP_User($user_id))->set_role('editor');"
+    },
+    {
+      "step": "updateUserMeta",
+      "meta": {
+          "admin_color": "modern"
+      },
+      "userId": 1
     },
     {
       "step": "login",
@@ -50,7 +57,7 @@
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=GatherPress/gatherpress-awesome"
+        "url": "https://github-proxy.com/proxy/?repo=author_name/project_urlname"
       },
       "options": {
           "activate": true
@@ -60,7 +67,7 @@
       "step": "importWxr",
       "file": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/carstingaxion/gatherpress-demo-data/main/GatherPress-demo-data-2024.xml"
+        "url": "https://raw.githubusercontent.com/GatherPress/demo-data/main/GatherPress-demo-data-2024.xml"
       }
     }
   ]
