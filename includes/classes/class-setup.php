@@ -29,7 +29,26 @@ class Setup {
 	 * Initializes and sets up various components of the plugin.
 	 */
 	protected function __construct() {
+		$this->instantiate_classes();
 		$this->setup_hooks();
+	}
+
+	/**
+	 * Instantiate singleton classes.
+	 *
+	 * This method initializes various singleton classes used by the plugin.
+	 * It may throw an Exception if there are issues instantiating the classes.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 *
+	 * @throws Exception If there are issues instantiating singleton classes.
+	 */
+	protected function instantiate_classes(): void {
+		// ENABLE or DISABLE
+		// Test adding some awesome endpoints!
+		// Awesome_Endpoints::get_instance(); // <-- Un-Comment to ENABLE
 	}
 
 	/**
