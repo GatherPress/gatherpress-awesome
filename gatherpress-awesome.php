@@ -8,6 +8,7 @@
  * Version:      1.0.0
  * Requires PHP: 7.4
  * Text Domain:  gatherpress-awesome
+ * Domain Path:  /languages
  * License:      GPLv2 or later (license.txt)
  *
  * @package GatherPress_Awesome
