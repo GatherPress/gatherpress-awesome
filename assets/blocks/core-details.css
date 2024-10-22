@@ -1,0 +1,36 @@
+/* .wp-block-details.is-style-variant-change-marker {
+    border: 2px solid currentColor;
+    overflow: hidden;
+    box-shadow: 0 4px  10px 0 rgba( 0, 0, 0, 0.3 );
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+} */
+
+.wp-block-details.is-style-variant-change-marker summary {
+    list-style-type: '⬇ ';
+} 
+
+.wp-block-details.is-style-variant-change-marker[open] > summary {
+    list-style-type: '⬆ ';
+}
+
+
+
+
+.wp-block-details.is-style-variant-animate {
+    overflow: hidden;
+}
+
+.wp-block-details.is-style-variant-animate[open] summary {
+    animation: animateUp .5s linear forwards;
+}
+
+@keyframes animateUp {
+    0% {
+        opacity: 0;
+        transform: translatey(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}

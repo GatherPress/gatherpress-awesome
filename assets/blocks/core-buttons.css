@@ -1,0 +1,22 @@
+.wp-block-buttons.is-style-group {
+    .wp-block-button {
+
+        width: 100%;
+
+        .wp-block-button__link{
+
+            display: block;
+            border-radius:0;
+        }
+    }
+}
+.wp-block-buttons.is-style-group.is-content-justification-left.is-vertical {
+    .wp-block-button__link{
+        text-align: left;
+    }
+}
+.wp-block-buttons.is-style-group.is-content-justification-right.is-vertical {
+    .wp-block-button__link{
+        text-align: right;
+    }
+}

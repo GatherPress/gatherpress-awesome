@@ -21,6 +21,7 @@ defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
 
 // Constants.
 define( 'GATHERPRESS_AWESOME_VERSION', current( get_file_data( __FILE__, array( 'Version' ), 'plugin' ) ) );
+define( 'GATHERPRESS_AWESOME_CORE_FILE', __FILE__ );
 define( 'GATHERPRESS_AWESOME_CORE_PATH', __DIR__ );
 
 /**
