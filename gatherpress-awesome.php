@@ -6,8 +6,8 @@
  * Author:            The GatherPress Community
  * Author URI:        https://gatherpress.org/
  * Version:           1.0.0
- * Requires PHP:      7.4
- * Requires at least: 6.7
+ * Requires PHP:      8.1
+ * Requires at least: 7.0
  * Requires Plugins:  gatherpress
  * Text Domain:       gatherpress-awesome
  * Domain Path:       /languages
@@ -26,7 +26,12 @@ if ( defined( 'GATHERPRESS_AWESOME_VERSION' ) ) {
 	return;
 }
 
-define( 'GATHERPRESS_AWESOME_VERSION', current( get_file_data( __FILE__, array( 'Version' ), 'plugin' ) ) );
+// Read by key: plugins hooking `extra_plugin_headers` push their headers ahead
+// of Version, so `current()` would return one of theirs instead.
+define(
+	'GATHERPRESS_AWESOME_VERSION',
+	get_file_data( __FILE__, array( 'Version' => 'Version' ), 'plugin' )['Version']
+);
 define( 'GATHERPRESS_AWESOME_CORE_PATH', __DIR__ );
 
 /**
