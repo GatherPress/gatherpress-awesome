@@ -17,9 +17,11 @@
  *   - Scheduled cron events via `wp_clear_scheduled_hook()`
  *   - User meta via `delete_metadata( 'user', 0, 'your_meta_key', '', true )`
  *
- * On multisite, loop over every site with `get_sites()` /
+ * On multisite, loop over every site with
+ * `get_sites( array( 'fields' => 'ids', 'number' => 0 ) )` /
  * `switch_to_blog()` / `restore_current_blog()` so per-site options get
- * cleaned across the network.
+ * cleaned across the network. `'number' => 0` matters: `get_sites()`
+ * returns at most 100 sites by default.
  *
  * The bare-minimum guard below ensures this file only ever runs from
  * WordPress's uninstall flow — never from a direct request.
