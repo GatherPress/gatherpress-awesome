@@ -26,8 +26,6 @@ if ( defined( 'GATHERPRESS_AWESOME_VERSION' ) ) {
 	return;
 }
 
-// Read by key: plugins hooking `extra_plugin_headers` push their headers ahead
-// of Version, so `current()` would return one of theirs instead.
 define(
 	'GATHERPRESS_AWESOME_VERSION',
 	get_file_data( __FILE__, array( 'Version' => 'Version' ), 'plugin' )['Version']
